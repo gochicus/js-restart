@@ -5,9 +5,10 @@ const products = [
     { id: 4, title: 'Gamepad', price: 4500 },
 ];
 
-const renderProduct = (title = "Product", price = 100) => {
+const renderProduct = (title = "Product", price = 100, img = "https://via.placeholder.com/150.jpeg") => {
     return `<div class="product-item">
                 <h3>${title}</h3>
+                <img src="${img}">
                 <p>${price}</p>
                 <button class="buy-btn">Добавить в корзину</button>
             </div>`;
