@@ -9,6 +9,8 @@ class Order {
         this.toppings = toppings;
         this.overallPrice = [];
         this.overallCal = [];
+        this.finalPrice = 0;
+        this.finalCal = 0;
     }
     _getSize() {
         let size = document.querySelector("#size-choice").value;
@@ -35,13 +37,13 @@ class Order {
         return this.toppings = toppings;
     }
     _calCount() {
-        let finalCal = overallCal.reduce(acc, item);
-        return finalCal;
+        let finalCal = overallCal.reduce((acc, item) => acc += item);
+        return this.finalCal = finalCal;
 
     }
     _priceCount() {
-        let finalPrice = overallPrice.reduce(acc, item);
-        return finalPrice;
+        let finalPrice = overallPrice.reduce((acc, item) => acc += item);
+        return this.finalPrice = finalPrice;
     }
     _render() {
         return document.querySelector("#buy").insertAdjacentHTML("afterend", `<p>${finalCal}</p> /n <p>${finalPrice}</p>`);
