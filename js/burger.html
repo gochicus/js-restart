@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="menu">
+        <button class="btn-cart" type="button">Корзина</button>
+    </header>
+    <main>
+        <form action="burger.js" method="#" id="burger">
+            <fieldset form="burger">
+                <legend> Size</legend>
+                <input list="size" id="size-choice" name="size-choice">
+                <datalist id="size">
+                    <option value="big"></option>
+                    <option value="small"></option>
+                </datalist>
+            </fieldset>
+            <fieldset form="burger">
+                <legend> Toppings</legend>
+                <input list="toppings" id="toppings-choice" name="toppings-choice">
+                <datalist id="toppings">
+                    <option value="cheese"></option>
+                    <option value="salad"></option>
+                    <option value="potato"></option>
+                </datalist>
+            </fieldset>
+            <fieldset form="burger">
+                <legend> Spices</legend>
+                <input list="spices" id="spices-choice" name="spices-choice">
+                <datalist id="spices">
+                    <option value="mayonese"></option>
+                    <option value="souse"></option>
+                </datalist>
+            </fieldset>
+            <button id="buy"> Купить бургер</button>
+        </form>
+    </main>
+    <script src="/js/burger.js"></script>
+</body>
+
+</html>
